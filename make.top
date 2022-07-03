@@ -1,4 +1,4 @@
-#####################################################################################
+####################################################################################
 #
 #The MIT License (MIT)
 #
@@ -58,8 +58,8 @@ else
   export HIPBONE_DEFINES=
 
   ifeq (GNU,${HIPBONE_ARCH})
-    HIPBONE_CFLAGS+= -mavx2 -ftree-vectorize -march=native -DGLIBCXX_PARALLEL
-    HIPBONE_CXXFLAGS+= -mavx2 -ftree-vectorize -march=native -DGLIBCXX_PARALLEL
+    HIPBONE_CFLAGS+= -mavx -ftree-vectorize -march=native -DGLIBCXX_PARALLEL
+    HIPBONE_CXXFLAGS+= -mavx -ftree-vectorize -march=native -DGLIBCXX_PARALLEL
   else ifeq (INTEL,${HIPBONE_ARCH})
     HIPBONE_CFLAGS+=-funroll-loops -xHost
     HIPBONE_CXXFLAGS+=-funroll-loops -xHost
