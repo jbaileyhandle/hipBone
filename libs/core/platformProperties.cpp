@@ -95,6 +95,9 @@ void platform_t::DeviceProperties(){
     Props["compiler_flags"] += " -ffast-math ";
     Props["defines/OCCA_USE_HIP"] = 1;
   }
+
+  // Append flags from occa setup.
+  Props["compiler_flags"] += device.properties()["kernel"]["compiler_flags"];
 }
 
 } //namespace libp
